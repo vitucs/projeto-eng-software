@@ -16,45 +16,21 @@
 
 <body>
     <header class="topo">
-        <a href="localhost:8000"><img alt="Logo Netflix" class="logo" src="https://upload.wikimedia.org/wikipedia/commons/7/75/Netflix_icon.svg"></a>
-        <p class="titulo-topo">Gerenciamento de Funcionários - Netflix</p>
+        <a href="./index.php"><img alt="Logo Netflix" class="logo" src="https://upload.wikimedia.org/wikipedia/commons/7/75/Netflix_icon.svg"></a>
+
+        <a class="titulo-topo" href="./contratar.php">Contratar Funcionário</a>
+        <a class="titulo-topo" href="./buscar.php">Buscar Funcionário</a>
+        <a class="titulo-topo" href="./demitir.php">Demitir Funcionário</a>
+        
     </header>
     <main class="principal">
         <div class="background">
-            <div class="top-background">
-                <form id="form1" name="form1" method="post">
-                    <select class="formulario" name="opcao">
-                        <option value="1">Contratar Funcionário</option>
-                        <option value="2">Buscar Funcionários</option>
-                        <option value="3">Demitir Funcionário</option>
-                    </select><input class="botao-formulario" type="submit" name="button" id="button" value="Selecionar" />
-                </form>
-                <?php
-                $valor = isset($_POST['opcao']) ? $valor = $_POST['opcao'] : 0;
-                switch ($valor) {
-                    case "1":
-                ?> <script>
-                            window.location.href = 'contratar.php';
-                        </script> <?php
-                                    break;
-                                case "2":
-                                    ?> <script>
-                            window.location.href = 'buscar.php';
-                        </script> <?php
-                                    break;
-                                case "3":
-                                    ?> <script>
-                            window.location.href = 'demitir.php';
-                        </script> <?php
-                                    break;
-                            }
-                                    ?>
-            </div>
+            <p>Gerenciamento de Funcionários - Netflix</p>
+            <p>Esse é o sistema de admissão, consulta e demissão de funcionários da Netflix, você deve selecionar uma das opções do topo da página para seguir.</p>
         </div>
     </main>
     <footer class="rodape">
         <p class="texto-rodape">© 2021 Netflix®, Inc. Todos os direitos reservados.</p>
     </footer>
 </body>
-
 </html>

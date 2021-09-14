@@ -16,29 +16,33 @@
 
 <body>
     <header class="topo">
-        <a href="localhost:8000/index.php"><img alt="Logo Netflix" class="logo" src="https://upload.wikimedia.org/wikipedia/commons/7/75/Netflix_icon.svg"></a>
-        <p class="titulo-topo">Gerenciamento de Funcionários - Netflix</p>
+        <a href="./index.php"><img alt="Logo Netflix" class="logo" src="https://upload.wikimedia.org/wikipedia/commons/7/75/Netflix_icon.svg"></a>
+
+        <a class="titulo-topo" href="./contratar.php">Contratar Funcionário</a>
+        <a class="titulo-topo" href="./buscar.php">Buscar Funcionário</a>
+        <a class="titulo-topo" href="./demitir.php">Demitir Funcionário</a>
+
     </header>
     <main class="principal">
         <div class="background">
-            <div class="top-background">
-                <?php
-                $pdo = new PDO('mysql:host=localhost;dbname=proj_engsoftware', 'root', '');
-                $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                if (isset($_POST['cpf'])) {
-                    $sql = $pdo->prepare("DELETE from funcionarios where  cpf = '{$_POST['cpf']}'");
-                    $sql->execute();
-                    ?> <script>
-                        window.location.href = 'sucesso.php';
-                    </script> <?php                    
-                }
-                ?>
-                <form id="form1" name="form1" method="post">
-                    <br><label class="formulario" for="cpf">CPF para deletar:</label>
-                    <input class="botao-formulario" type="text" id="cpf" name="cpf"><br><br>
-                    <input class="botao-formulario" type="submit" name="button" id="button" value="Enviar" />
-                </form>
-            </div>
+            <?php
+            $pdo = new PDO('mysql:host=localhost;dbname=proj_engsoftware', 'root', '');
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            if (isset($_POST['cpf'])) {
+                $sql = $pdo->prepare("DELETE from funcionarios where  cpf = '{$_POST['cpf']}'");
+                $sql->execute();
+            ?> <script>
+                    window.location.href = 'sucesso.php';
+                </script> <?php
+                        }
+                            ?>
+            <form id="form1" name="form1" method="post">
+                <div class="campo-form">
+                    <label class="formulario" for="cpf">CPF para deletar:</label>
+                    <input class="botao-formulario-input" type="text" id="cpf" name="cpf">
+                </div>
+                <input class="botao-formulario" type="submit" name="button" id="button" value="Enviar" />
+            </form>
         </div>
     </main>
     <footer class="rodape">
