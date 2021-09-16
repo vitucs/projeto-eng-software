@@ -28,7 +28,7 @@
             <form id="form1" name="form1" method="post" action="./buscar-resultado.php">
                 <div class="campo-form">
                     <label class="formulario" for="nome">Nome para buscar:</label>
-                    <input class="botao-formulario-input" type="text" id="nome" name="nome">
+                    <input class="botao-formulario-input" type="text" id="nome" name="nome" required>
                 </div>
                 <input class="botao-formulario" type="submit" name="button" id="button" value="Enviar" />
             </form>

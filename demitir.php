@@ -39,7 +39,7 @@
             <form id="form1" name="form1" method="post">
                 <div class="campo-form">
                     <label class="formulario" for="cpf">CPF para deletar:</label>
-                    <input class="botao-formulario-input" type="text" id="cpf" name="cpf">
+                    <input class="botao-formulario-input" type="text" id="cpf" name="cpf" required>
                 </div>
                 <input class="botao-formulario" type="submit" name="button" id="button" value="Enviar" />
             </form>

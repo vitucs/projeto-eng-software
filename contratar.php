@@ -37,23 +37,23 @@
                                 ?>
                 <form id="form1" name="form1" method="post">
                     <div class="campo-form">
-                        <label class="formulario" for="name">Nome:</label>
-                        <input class="botao-formulario-input" type="text" id="nome" name="nome">
+                        <label class="formulario" for="nome">Nome:</label>
+                        <input class="botao-formulario-input" type="text" id="nome" name="nome" required>
                     </div>
 
                     <div class="campo-form">
                         <label class="formulario" for="email">Email:</label>
-                        <input class="botao-formulario-input" type="email" id="email" name="email">
+                        <input class="botao-formulario-input" type="email" id="email" name="email" required>
                     </div>
 
                     <div class="campo-form">
                         <label class="formulario" for="cpf">CPF:</label>
-                        <input class="botao-formulario-input" type="text" id="cpf" name="cpf">
+                        <input class="botao-formulario-input" type="text" id="cpf" name="cpf" required>
                     </div>
 
                     <div class="campo-form">
                         <label class="formulario" for="cargo">Cargo:</label>
-                        <input class="botao-formulario-input" type="text" id="cargo" name="cargo">
+                        <input class="botao-formulario-input" type="text" id="cargo" name="cargo" required>
                     </div>
                     <input class="botao-formulario" type="submit" name="button" id="button" value="Enviar" />
                 </form>
